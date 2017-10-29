@@ -1,0 +1,10 @@
+Input
+: : : : : : : : : : : : re-enter 0 to store as value.
+any other value ends input: Input finished.
+total mean: 3.45
+----------
+          count: 6
+index positions: [ 3 4 5 7 8 9]
+            sum: 26
+           mean: 4.33
+            min: 4 [ 3 5 7 9]

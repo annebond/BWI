@@ -1,0 +1,18 @@
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter size of String array, and strings for each position:
+Filter
+: : : : : enter regex: [
+abcdefgh 3bcdefgh de12fgh de34fgh efgh ]
+[
+abcdefgh 3bcdefgh de12fgh de34fgh efgh ]
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter size of String array, and strings for each position:
+Filter
+: : : : : enter regex: [
+abcdefgh 3bcdefgh de12fgh de34fgh efgh ]
+[
+abcdefgh efgh ]
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)

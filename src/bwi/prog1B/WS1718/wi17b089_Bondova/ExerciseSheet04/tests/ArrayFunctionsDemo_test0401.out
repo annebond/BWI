@@ -1,0 +1,22 @@
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to find:
+find 1: 0 (30)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to find:
+find 1: 5 (35)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to find:
+find 1: 9 (39)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to find:
+find 1: -1 (10)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to find:
+find 1: -1 (40)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)

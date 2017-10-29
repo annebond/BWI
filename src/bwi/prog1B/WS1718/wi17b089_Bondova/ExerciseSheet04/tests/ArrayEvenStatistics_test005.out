@@ -1,0 +1,20 @@
+Input
+: re-enter 0 to store as value.
+any other value ends input: value 0 stored.
+: re-enter 0 to store as value.
+any other value ends input: value 0 stored.
+: re-enter 0 to store as value.
+any other value ends input: value 0 stored.
+: re-enter 0 to store as value.
+any other value ends input: value 0 stored.
+: re-enter 0 to store as value.
+any other value ends input: value 0 stored.
+: re-enter 0 to store as value.
+any other value ends input: value 0 stored.
+: re-enter 0 to store as value.
+any other value ends input: Input finished.
+          count: 6
+index positions: [ 0 1 2 3 4 5]
+            sum: 0
+           mean: 0.00
+            max: 0 [ 0 1 2 3 4 5]

@@ -1,0 +1,17 @@
+6
+5
+abcdefgh
+3bcdefgh
+de12fgh
+de34fgh
+efgh
+.*fgh
+6
+5
+abcdefgh
+3bcdefgh
+de12fgh
+de34fgh
+efgh
+\D*fgh
+0

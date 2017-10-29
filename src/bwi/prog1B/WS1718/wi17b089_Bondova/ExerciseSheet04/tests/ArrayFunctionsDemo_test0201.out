@@ -1,0 +1,34 @@
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to look for:
+contains: true (0)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to look for:
+contains: true (11)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to look for:
+contains: true (10)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to look for:
+contains: true (22)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to look for:
+contains: true (39)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to look for:
+contains: false (1)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to look for:
+contains: false (15)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter value to look for:
+contains: false (40)
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)

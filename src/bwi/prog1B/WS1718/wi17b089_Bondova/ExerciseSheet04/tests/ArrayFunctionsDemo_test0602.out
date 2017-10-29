@@ -1,0 +1,26 @@
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter size of String array, and strings for each position:
+Filter
+: : : : : enter regex: [
+lala lele lili lolo lulu ]
+[
+lala lele lili ]
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter size of String array, and strings for each position:
+Filter
+: : : : : enter regex: [
+lala lele lili lolo lulu ]
+[
+lolo lulu ]
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
+enter size of String array, and strings for each position:
+Filter
+: : : : : enter regex: [
+lala lele lili lolo lulu ]
+[
+]
+choose method to test 
+(LINEAR_FILL = 1, CONTAINS = 2, 	COUNT_BELOW = 3, FIND_1 = 4, FIND_2 = 5, FILTER = 6)
