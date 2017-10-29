@@ -3,7 +3,6 @@ import bwi.prog.utils.TextIO;
 public class ReadArrayPartial {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int[] numbArray = new int[10];
 		int count = 1;
