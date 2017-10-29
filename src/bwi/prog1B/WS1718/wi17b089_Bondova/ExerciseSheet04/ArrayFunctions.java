@@ -1,9 +1,6 @@
 package bwi.prog1B.WS1718.wi17b089_Bondova.ExerciseSheet04;
 import bwi.prog.utils.TextIO;
-import java.util.regex.Pattern;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Matcher;
 public class ArrayFunctions {
 
 	public static void main(String[] args) {
@@ -12,7 +9,7 @@ public class ArrayFunctions {
 	}
 	public static void linearFill(double[] array, double start, double inc) {
 		for (int i = 0; i < array.length; i++) {
-			array [i] = start + (inc + 1);
+			array [i] = start + (inc * i);
 		}
 	}
 
@@ -58,15 +55,13 @@ public class ArrayFunctions {
 		return -1;
 	}
 	public static String[] filter(String[] arr, String regex) {
-		List<String> allMatches = new ArrayList<String> ();
+		ArrayList<String> allMatches = new ArrayList<> ();
 		allMatches.clear();
 		
 		for (int i = 0; i < arr.length; i++) {
-			Matcher m = Pattern.compile("regex")
-				     .matcher(arr[i]);
-				 while (m.find()) {
-				   allMatches.add(m.group());
-				 }	
+			if (arr[i].matches(regex)) {
+				allMatches.add(arr[i]);
+			}
 		}
 		return allMatches.toArray(new String[allMatches.size()]);
 	}
