@@ -2,9 +2,13 @@ package bwi.prog1B.WS1718.wi17b089_Bondova.ALG;
 import bwi.prog.utils.TextIO;
 
 /* 
- * U6: Entwickeln Sie ein Programm, das zwei natürliche Zahlen einliest und den größten gemeinsamen
+U6: Entwickeln Sie ein Programm, das zwei natürliche Zahlen einliest und den größten gemeinsamen
 Teiler der zwei Zahlen auf der Konsole ausgibt. Die Berechnung sollte nach dem Euklidischen
 Algorithmus erfolgen. Dieser Algorithmus ist rekursiv.
+
+Definition of recursive:
+Unter Rekursion versteht man die Definition eines Problems, einer Funktion oder eines
+Verfahrens durch sich selbst.
  */
 
 public class ALG6 {
