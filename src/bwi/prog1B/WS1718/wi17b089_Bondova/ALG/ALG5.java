@@ -14,6 +14,12 @@ public class ALG5 {
 		int n;
 		TextIO.put("Bitte eine Zahl eingeben: ");
 		n = TextIO.getInt();
+		while (n < 0) {
+			  TextIO.putln ("Bitte eine positive Zahl eingeben");
+			  TextIO.put ("Bitte eine Zahl eingeben: ");
+			  n = TextIO.getInt();
+			  
+			}
 		TextIO.putln("REKURSIV: Fakultät von " + n + " aka " + n + "! = " +  fact_rec(n));
 		TextIO.put("ITERATIV: Fakultät von " + n + " aka " + n + "! = " +  fact_ite(n));
 		
