@@ -30,10 +30,10 @@ public class ALG7 {
 			TextIO.putln(count + ".  Move top disk from " + start + " to " + end);
 			count++;
 		} else {
-			move(n-1, start, end, temp); //n=2 temp = c, end = b; n=1 temp=b, end=c;
-			TextIO.putln(count + ".  Move top disk from " + start + " to " + end);
+			move(n-1, start, end, temp); //step 1; temp; n=2 temp = c, end = b; n=1 temp=b, end=c;
+			TextIO.putln(count + ".  Move top disk from " + start + " to " + end); //step 2
 			count++;
-			move(n-1, temp, start, end);
+			move(n-1, temp, start, end); //step 3
 		}
 		
 	}
