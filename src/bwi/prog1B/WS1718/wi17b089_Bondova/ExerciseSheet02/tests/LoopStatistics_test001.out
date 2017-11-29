@@ -1,0 +1,5 @@
+enter numbers:
+numbers entered: 4
+minimum: 2.00
+maximum: 5.00
+mean:    3.50

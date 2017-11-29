@@ -1,0 +1,5 @@
+enter numbers:
+numbers entered: 5
+minimum: 1.00
+maximum: 1.00
+mean:    1.00

@@ -1,0 +1,2 @@
+enter date (yyyymmdd)
+invalid date
