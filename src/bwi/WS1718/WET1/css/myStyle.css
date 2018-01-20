@@ -1,0 +1,20 @@
+.produkt {
+    height: 390px;
+    text-align: center;
+}
+
+.produktpreis {
+    font-weight: bold;
+    font-size: 22px;
+	padding: 10px 0px 10px 0px;
+}
+.produktbeschreibung {
+	font-style: italic;	
+	height: 80px;
+	font-size: 12px;
+	padding: 10px 0px 10px 0px;
+}
+
+.InDenWarenkorb {
+	text-align:right;
+}
