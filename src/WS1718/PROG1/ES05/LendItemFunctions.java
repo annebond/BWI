@@ -1,4 +1,5 @@
 package WS1718.PROG1.ES05;
+import WS1718.PROG1.prog.utils.TextIO;
 
 public class LendItemFunctions {
 
@@ -90,8 +91,10 @@ public class LendItemFunctions {
 			return 1;
 
 		int res=it1.description.compareTo(it2.description);
-		if (res>0) return 1;
-		if (res<0) return -1;
+		if (res>0) 
+			return 1;
+		if (res<0) 
+			return -1;
 		return 0;
 	}
 	
@@ -106,9 +109,44 @@ public class LendItemFunctions {
 		int res= (d1.day + d1.month * 100 + d1.year * 10000) - (d2.day + d2.month
 				* 100 + d2.year * 10000);
 		
-		if (res>0) return 1;
-		if (res<0) return -1;
+		if (res>0) 
+			return 1;
+		if (res<0) 
+			return -1;
 		return 0;
 
 	}
+	
+	public static int compareByLender(LendItem it1, LendItem it2) {
+		if (it1 == null && it2 == null)
+			return 0;
+		if (it1 == null)
+			return -1;
+		if (it2 == null)
+			return 1;
+		
+		int res = it1.description.compareTo(it2.description);
+		if (res>0)
+			return 1;
+		if (res<0)
+			return -1;
+		return 0;
+	}
+	
+	public static int compareByOwner(LendItem it1, LendItem it2) {
+		if (it1 == null && it2 == null)
+			return 0;
+		if (it1 == null)
+			return -1;
+		if (it2 == null)
+			return 1;
+		
+		int res=it1.owner.compareTo(it2.owner);
+		if (res>0) 
+			return 1;
+		if (res<0) 
+			return -1;
+		return 0;
+	}
+
 }
