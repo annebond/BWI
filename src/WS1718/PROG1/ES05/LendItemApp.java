@@ -1,5 +1,7 @@
 package WS1718.PROG1.ES05;
 import WS1718.PROG1.prog.utils.TextIO;
+//import static bwi.prog.Assignments.prog1.ExerciseSheet05.org.LendItemFunctions.*;
+import WS1718.PROG1.ES05.LendItemFunctions.*;
 
 public class LendItemApp {
 		public static void main(String[] args) {
@@ -14,14 +16,14 @@ public class LendItemApp {
 			input = TextIO.getlnInt();
 			switch (input) {
 			case 1:
-				it1 = scanLendItem();
+				it1 = LendItemFunctions.scanLendItem();
 				break;
 			case 2:
-				it2 = scanLendItem();
+				it2 = LendItemFunctions.scanLendItem();
 				break;
 			case 3:
-				TextIO.putf("%s\n", lendItemString(it1, format));
-				TextIO.putf("%s\n", lendItemString(it2, format));
+				TextIO.putf("%s\n", LendItemFunctions.lendItemString(it1, format));
+				TextIO.putf("%s\n", LendItemFunctions.lendItemString(it2, format));
 			break;
 			case 4:
 				TextIO.putf("set compare mode ("
@@ -33,7 +35,7 @@ public class LendItemApp {
 				mode = TextIO.getInt();
 				break;
 			case 5:
-				int cmp=compare(it1, it2, mode);
+				int cmp=LendItemFunctions.compare(it1, it2, mode);
 				if(cmp<0)
 					TextIO.putf("LendItem1 is before LendItem2.\n");
 				else if(cmp>0)
