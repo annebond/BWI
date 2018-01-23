@@ -1,4 +1,4 @@
-package LendItemManager;
+package WS1718.PROG1.LendItemManager;
 
 public class Date {
 	

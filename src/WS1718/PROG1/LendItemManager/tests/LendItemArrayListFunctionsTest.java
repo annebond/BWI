@@ -1,5 +1,4 @@
-package LendItemManager.tests;
-import LendItemManager.*;
+package WS1718.PROG1.LendItemManager.tests;
 import java.lang.reflect.Field;
 
 import static org.testng.Assert.assertEquals;
@@ -9,6 +8,8 @@ import static org.testng.Assert.fail;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import WS1718.PROG1.LendItemManager.*;
 
 
 

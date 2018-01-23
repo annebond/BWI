@@ -1,5 +1,4 @@
-package LendItemManager.tests;
-import LendItemManager.*;
+package WS1718.PROG1.LendItemManager.tests;
 import static org.testng.Assert.*;
 
 import java.lang.reflect.Field;
@@ -7,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.annotations.Test;
+
+import WS1718.PROG1.LendItemManager.*;
 
 public class LendItemArrayListTest {
 	/**

@@ -1,4 +1,4 @@
-package LendItemManager;
+package WS1718.PROG1.LendItemManager;
 
 import java.util.ArrayList;
 //import bwi.prog.utils.TextIO;
