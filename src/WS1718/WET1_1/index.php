@@ -2,6 +2,8 @@
 session_start();
 include './inc/daten.inc.php';
 
+//test
+
 //!emtpy ist das gleiche wie isset
 
 // wenn noch nichts in der session, muss ich es setzen:
