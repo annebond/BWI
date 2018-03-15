@@ -9,11 +9,24 @@ public class Artist {
 	}
 	
 	public void setName(String name) {
-		if (name == "" || name == "  "){
-			this.name = null;
+		if (name == null || name.trim().length() == 0){
+			//this.name = null; --> if an invalid argument is passed to the method the state of the object remains unchanged
 		} else {
 			this.name = name;
 		}
 	}
-
+	
+	public Artist() {
+		this.setName("unknown");
+		
+	}
+	
+	public Artist(String name) {
+		//this.setName(name);
+		this.name = name;
+	}
+	
+	public Artist(Artist a) {
+		this.setName(a.getName());
+	}
 }
