@@ -17,7 +17,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import MusicLandscape.entities.*;
+import SS18.PROG2.MusicLandscape.entities.*;
 
 
 public class TrackTest {
