@@ -3,11 +3,30 @@ package SS18.PROG2.MusicLandscape.entities;
 public class Track {
 
 	private int duration;
-	private Artist performer = new Artist();
+	private Artist performer;
 	private String title;
-	private Artist writer = new Artist();
+	private Artist writer;
 	private int year;
 	
+	public Track () {
+		this.title = null;
+		this.duration = 0;
+		this.writer = new Artist();
+		this.performer = new Artist();
+		this.year = 1900;
+	}
+	
+	public Track (String title) {
+		this();
+		this.title = title;
+	}
+	public Track (Track t) {
+		this.duration = t.duration;
+		this.performer = new Artist(t.performer);
+		this.title = t.title;
+		this.writer = new Artist(t.writer);
+		this.year = t.year;
+	}
 	public int getDuration() {
 		return duration;
 	}

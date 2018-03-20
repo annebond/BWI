@@ -23,8 +23,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import SS18.PROG2.MusicLandscape.entities.Date;
-import SS18.PROG2.MusicLandscape.entities.Venue;
+import SS18.PROG2.MusicLandscape.Date;
+import SS18.PROG2.MusicLandscape.Venue;
 import SS18.PROG2.MusicLandscape.entities.*;
 
 public class EventTest {

@@ -5,7 +5,7 @@
 //         stage = ES02
 //
 // ***************************************************
-package SS18.PROG2.MusicLandscape.entities;
+package SS18.PROG2.MusicLandscape;
 
 /**
  * 

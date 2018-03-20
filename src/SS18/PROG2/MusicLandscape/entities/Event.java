@@ -1,5 +1,8 @@
 package SS18.PROG2.MusicLandscape.entities;
 
+import SS18.PROG2.MusicLandscape.Date;
+import SS18.PROG2.MusicLandscape.Venue;
+
 public class Event {
 	
 	private Artist artist = new Artist();
