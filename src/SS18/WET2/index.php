@@ -22,9 +22,29 @@
     
     
     
-    <?php 
-    
-    ?>
+<?php
+	//DB connection
+	$dbobjekt = new mysqli ("localhost","bwiuser","bwipasswort","bwi_bb_userverwaltung");
+	
+	$query = "SELECT * FROM users";
+    $result = $dbobjekt->query($query);
+	
+	//nur spaltenname und Werte
+	$zeile1 = $result->fetch_assoc();
+	
+	// als objekt
+	$zeile1 = $result->fetch_object();
+	
+	
+	while($zeile1 = $result->fetch_assoc()){
+		Echo "User ID: ".$zeile1['user_id'];
+	};
+	
+	$zeile1 = $result->fetch_array();
+	
+	//var_dump($result);
+	
+?>
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

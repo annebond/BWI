@@ -63,50 +63,50 @@ if (isset($_GET["preis"])){
             <?php
                 //include './inc/produkte.inc.php';
                 //var_dump($_POST['suche']);
-//                 if (isset($_POST["suche"])){
-//                     foreach ($produkte as $produkt) {
-//                         if ($produkt["ID"] == $_POST["suche"]) {
-//                             echo "<div class='produkt col-md-4'>";
-//                             echo "<h3>";
-//                             echo $produkt["Name"];
-//                             echo "</h3>";
-//                             echo "<img src=\"pics/" . $produkt['ID'] . ".jpg\"/>";
-//                             echo "<div class='produktbeschreibung'>";
-//                             echo $produkt['Desc'];
-//                             echo "</div>";
-//                             echo "<div>";
-//                                 switch ($produkt["Sterne"]) {
-//                                     case $produkt["Sterne"] == 4;
-//                                     echo "****";
-//                                     break;
-//                                     case $produkt["Sterne"] == 3;
-//                                     echo "***";
-//                                     break;
-//                                     case $produkt["Sterne"] == 2;
-//                                     echo "**";
-//                                     break;
-//                                 };
-//                             echo "</div>";
-//                             echo "<div class='produktpreis'>";
-//                             echo "&euro; " . $produkt["Preis"];
-//                             echo "</div>";
-//                             echo "<div class='InDenWarenkorb' >";
-//                             echo "<a class=\"btn btn-primary\" href=\"index.php?preis=" . $produkt['Preis'] . "\" role=\"button\">In den Warenkorb</a>";
-//                             echo "</div>";
+//                  if (isset($_POST["suche"])){
+//                      foreach ($produkte as $produkt) {
+//                          if ($produkt["ID"] == $_POST["suche"]) {
+//                              echo "<div class='produkt col-md-4'>";
+//                              echo "<h3>";
+//                              echo $produkt["Name"];
+//                              echo "</h3>";
+//                              echo "<img src=\"pics/" . $produkt['ID'] . ".jpg\"/>";
+//                              echo "<div class='produktbeschreibung'>";
+//                              echo $produkt['Desc'];
+//                              echo "</div>";
+//                              echo "<div>";
+//                                  switch ($produkt["Sterne"]) {
+//                                      case $produkt["Sterne"] == 4;
+//                                      echo "****";
+//                                      break;
+//                                      case $produkt["Sterne"] == 3;
+//                                      echo "***";
+//                                      break;
+//                                      case $produkt["Sterne"] == 2;
+//                                      echo "**";
+//                                      break;
+//                                  };
+//                              echo "</div>";
+//                              echo "<div class='produktpreis'>";
+//                              echo "&euro; " . $produkt["Preis"];
+//                              echo "</div>";
+//                              echo "<div class='InDenWarenkorb' >";
+//                              echo "<a class=\"btn btn-primary\" href=\"index.php?preis=" . $produkt['Preis'] . "\" role=\"button\">In den Warenkorb</a>";
+//                              echo "</div>";
                             
-//                             break;
-//                         }
-//                         //else {
-//                           //  echo "<div class='alert alert-danger' role='alert'>";
-//                             //    echo "ProduktID: " . $_POST["suche"] . " nicht vorhanden";
-//                               //  break;
-//                             //echo "</div>";
-//                         //};
-//                     };
-//                 }
-//                 else {
-//                     include './inc/produkte.inc.php';
-//                 };
+//                              break;
+//                          }
+//                          //else {
+//                            //  echo "<div class='alert alert-danger' role='alert'>";
+//                              //    echo "ProduktID: " . $_POST["suche"] . " nicht vorhanden";
+//                                //  break;
+//                              //echo "</div>";
+//                          //};
+//                      };
+//                  }
+//                  else {
+//                      include './inc/produkte.inc.php';
+//                  };
             ?>
         </div>
         
