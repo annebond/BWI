@@ -28,11 +28,12 @@
       		<input type ="submit" value="Senden">
       	</form>
         <?php
+
         if (count($_POST)>0){
             //echo "hallo";
             //var_dump($_POST);
-            $rss=$_POST["URL"];
-            $meinXML = simplexml_load_file($rss);
+            $feed=$_POST["URL"];
+            $meinXML = simplexml_load_file($feed);
             
             $root_element_name = $meinXML->getName();
             if ($root_element_name  == 'feed') {
@@ -65,7 +66,7 @@
                     echo "</div>";
                 };
                 
-            }
+            };
             
             
 
