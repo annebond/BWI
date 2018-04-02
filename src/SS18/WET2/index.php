@@ -23,25 +23,32 @@
     
     
 <?php
-	//DB connection
+    //function opens a new connection to the MySQL server -> mysqli_connect(host,username,password,dbname,port,socket);
 	$dbobjekt = new mysqli ("localhost","bwiuser","bwipasswort","bwi_bb_userverwaltung");
 	
 	$query = "SELECT * FROM users";
     $result = $dbobjekt->query($query);
 	
-	//nur spaltenname und Werte
+    //	Fetches a result row as an associative array
 	$zeile1 = $result->fetch_assoc();
+	var_dump($zeile1);
 	
-	// als objekt
+	/* Fetches a result row as an associative, a numeric array, or both 
+	 * mysqli_fetch_array(result,resulttype);
+	 * resulttype: MYSQLI_ASSOC, MYSQLI_NUM, MYSQLI_BOTH */
+	$zeile1 = $result->fetch_array();
+	var_dump($zeile1);
+
+	// 	Returns the current row of a result set, as an object
 	$zeile1 = $result->fetch_object();
+	var_dump($zeile1);
 	
 	
 	while($zeile1 = $result->fetch_assoc()){
 		Echo "User ID: ".$zeile1['user_id'];
 	};
 	
-	$zeile1 = $result->fetch_array();
-	
+
 	//var_dump($result);
 	
 ?>
