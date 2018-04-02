@@ -28,6 +28,10 @@
 	
 	$query = "SELECT * FROM users";
     $result = $dbobjekt->query($query);
+    
+    // return the number of rows in a result set
+    $anzahl = $result->num_rows;
+    echo "Anzahl der gefundenen Einträge:".$anzahl;
 	
     //	Fetches a result row as an associative array
 	$zeile1 = $result->fetch_assoc();
