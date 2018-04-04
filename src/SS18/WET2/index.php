@@ -42,6 +42,8 @@
 	 * resulttype: MYSQLI_ASSOC, MYSQLI_NUM, MYSQLI_BOTH */
 	$zeile1 = $result->fetch_array();
 	var_dump($zeile1);
+	//Echo "User ID_test: ".$zeile1['user_id'];
+	//Echo $zeile1[1];
 
 	// 	Returns the current row of a result set, as an object
 	$zeile1 = $result->fetch_object();
