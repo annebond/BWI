@@ -29,4 +29,10 @@ public class Artist {
 	public Artist(Artist a) {
 		this.setName(a.getName());
 	}
+	
+	@Override
+	public String toString() {
+		String strArtist = this.name != null ? this.name : "unknown";
+		return strArtist;
+	}
 }

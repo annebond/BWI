@@ -2,7 +2,7 @@
 //		
 //       git.rev = 222
 //  git.revision = 5606f8db8c00d9e1a60936282607a4f156a2c7c2
-//         stage = ES02
+//         stage = ES03
 //
 // ***************************************************
 package SS18.PROG2.MusicLandscape;
@@ -83,6 +83,16 @@ public class Venue {
 	
 	/**************** ES 03 ***********************/
 
-	
+	/**
+	 * creates a copy of a venue
+	 * @param v the original venue to copied
+	 * @ProgrammingProblem.Aspect copy constructor 
+     * @ProgrammingProblem.Introduced ExerciseSheet03
+	 */
+	public Venue(Venue v){
+		if (v==null)return;
+		this.name = v.name;
+		this.capacity = v.capacity;
+	}	
 
 }

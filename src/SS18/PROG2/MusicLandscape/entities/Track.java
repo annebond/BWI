@@ -116,4 +116,9 @@ public class Track {
 		}
 		return formTitle(strForm);
 	}
+	
+	@Override
+	public String toString () {	
+		return this.getString();		
+	}
 }
