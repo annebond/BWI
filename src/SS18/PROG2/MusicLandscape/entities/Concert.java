@@ -2,7 +2,7 @@ package SS18.PROG2.MusicLandscape.entities;
 
 public class Concert extends Event {
 	private int nextIdx = 0;
-	private Track [] setList = new Track[0];
+	private Track [] setList = new Track[1];
 	
 	public Concert() {
 	}
@@ -16,12 +16,14 @@ public class Concert extends Event {
 		if (t == null) return false;
 		
 		if (nextIdx < setList.length) {
-			ensureCapacity(nextIdx+1);
 			setList[nextIdx] = t;
 			nextIdx++;
 			return true;
 		} else {
-			return false;
+			ensureCapacity(nextIdx+1);
+			setList[nextIdx] = t;
+			nextIdx++;
+			return true;
 		}
 	}
 	
