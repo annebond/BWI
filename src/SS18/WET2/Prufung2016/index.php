@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿<?php
+
+include 'model/Flugzeug.class.php';
+include 'utility/DB.class.php';
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -15,16 +22,16 @@
 	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	
-	<script>	
-			
-		//JS-Methode mit AJAX-POST-Request ...
-		
-		
-		
-		
-		
-		
-	</script>
+	 <script language="JavaScript">
+ 			function flugzeugclick(id)
+ 			{
+ 				//JS-Methode mit AJAX-POST-Request ...
+				$.post('ajax/wartung.php', {'id': id})
+				.done(function( data ) {
+				    $('#wartung').html(data);
+				  });
+ 			}
+	</script> 
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,25 +50,23 @@
 		
 		<div class="col-md-3">
 			<nav>
-				
-				
-				
-				
+				<?php
+				include 'inc/navi.php';
+				?>
 			</nav>
 		</div>
 		
 		<div class="col-md-6">
 			<main>
-			
-			
-			
-			
+				<?php
+				include 'inc/flugzeuge.php';
+				?>
 			</main>
 		</div>
 		
 		<div class="col-md-3">
 			<div id="wartung">
-			
+				
 			</div>
 		</div>
 		

@@ -61,6 +61,12 @@
  *	 var txt = $("#box").text();
  * 	$("#box").text("Textinhalt");
  * 
+ * JS methode: POST ajax Request
+ * https://api.jquery.com/jquery.post/
+ * $.post( "test.php", { name: "John", time: "2pm" })
+  .done(function( data ) {
+    alert( "Data Loaded: " + data );
+  });
  */
 
 
