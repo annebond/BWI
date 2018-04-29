@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+	<menuepunkt>
+		<bezeichnung>Flugzeuge Übersicht</bezeichnung>
+		<section>alle</section>
+	</menuepunkt>
+	<menuepunkt>
+		<bezeichnung>Neues Flugzeug anlegen</bezeichnung>
+		<section>neu</section>
+	</menuepunkt>
+	<menuepunkt>
+		<bezeichnung>Wartungsplan bearbeiten</bezeichnung>
+		<section>plan</section>
+	</menuepunkt>
+</navigation>
+

@@ -1,0 +1,8 @@
+﻿Falls DB-Zugriff nicht möglich:
+
+$result=array(
+	array(12,"Boeing 747-300",17300,"Austrian Airlines"),
+	array(18,"Boeing 747-300",15420,"Lufthansa"),
+	array(156,"A320-200",17800,"FlyNiki"),
+	array(157,"A320-200",13280,"FlyNiki")
+);
