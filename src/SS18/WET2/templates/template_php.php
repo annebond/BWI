@@ -1,4 +1,24 @@
 <?php
+include './inc/daten.inc.php';
+
+//GET POST SESSION
+if(isset($_GET['navi'])) {
+    echo 'navi gibt es in superarray GET';
+}
+// Übergabe mit einer Form, braucht method + einzelne elemente in form brauchen name
+<form method="post" action="./newfile.php">
+<input type ="text" name="LeitungV" placeholder="Vorname"> </br>
+$var = $_POST['LeitungV']
+echo $var;
+
+//übergabe mit GET und <a href>
+<a href="index.php?LeitungV=Max&LeitungN=Muster"></a>
+
+// mit array[] = "2" wird der value 2 einfach in den array hinzugefügt - keine angabe vom index-position notwendig
+// session flugzeugids ist ein array in dem id, die über post übergeben werden, gespeichert werden 
+session_start();
+$_SESSION['flugzeugids'][] =  $_POST['id'];
+$ids = $_SESSION['flugzeugids'];
 
 //XML
 $meinXML = simpleXML_load_file('Pfad/zur/Datei.xml');
