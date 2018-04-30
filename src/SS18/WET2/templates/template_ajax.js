@@ -44,6 +44,7 @@
  *	$(function(){
  *		funktionsAufruf();
  *	});
+ * -> ob DOM geladen, einfach mit JQuery: $(document).ready(function() { //code});
  *
  * JQUERY EVENT methoden
  * https://www.w3schools.com/jquery/jquery_events.asp
@@ -60,6 +61,10 @@
  * JQUERY Zugriff und Setzen
  *	 var txt = $("#box").text();
  * 	$("#box").text("Textinhalt");
+ * 
+ * JQuery vs. Vanilla Javascript
+ * $(el).css('border-width', '20px');
+ * el.style.borderWidth = '20px';
  * 
  * JS methode: POST ajax Request
  * https://api.jquery.com/jquery.post/
