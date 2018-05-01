@@ -1,0 +1,219 @@
+SET serveroutput ON; 
+variablen Wert zuweisen: var := 3;
+
+============ TRIGGER ============================================================
+ ... BEFORE INSERT / DELETE / UPDATE
+ ... BEFORE INSERT OR UPDATE
+ ... IF DELETING / INSERTING / UPDATETING THEN
+ :new.columnname / :old. columnname
+
+im declare bereich: PRAGMA AUTONOMOUS_TRANSACTION;
+vorm end: COMMIT;
+
+CREATE OR REPLACE TRIGGER trig_del_pas BEFORE DELETE
+ON passagierliste FOR EACH ROW
+DECLARE
+BEGIN
+  DELETE FROM ...
+  dbms_output.put_line('test-text');
+EXCEPTION  
+  WHEN OTHERS THEN
+    dbms_output.put_line('error beim trigger ' || SQLCODE);
+    RAISE;
+END;
+/
+============ VIEWS ============================================================
+CREATCREATE VIEW view-name AS sql statement
+CREATE VIEW heavyParts AS 
+	SELECT *
+	FROM parts 
+	WHERE weight > 100.0;
+SELECT * FROM Personal_view ORDER BY nachname;
+INSERT INTO Personal_view (vorname, nachname, monatsgehalt) values ('Max', 'Muster', 5000); 
+DELETE FROM Personal_view WHERE nachname = 'Mann';
+UPDATE Personal_view SET nachname = 'Austrian' WHERE PersonID = 90;
+
+============ PROCEDURE ============================================================
+CREATE OR REPLACE PROCEDURE procname 
+AS
+	-- variables
+BEGIN
+EXCEPTION
+END;
+
+CREATE OR REPLACE PROCEDURE procname (myname IN VARCHAR2 default 'test', number OUT NUMBER default 0) ...
+
+EXEC procname;
+BEGIN
+	Procname;
+END;
+
+============ FUNCTION ============================================================
+CREATE OR REPLACE FUNCTION name
+RETURN INT
+IS
+	-- variables
+BEGIN
+	return --what to return, type as declared in RETURN
+EXCEPTION
+END;
+
+============ CURSOR ============================================================
+DECLARE 
+	-- Define cursor 
+	CURSOR cursor-name IS SELECT * FROM tabelle; 
+
+BEGIN 
+	-- FOR implicitly opens cursor 
+	FOR vResult IN cursor-name 
+	LOOP 
+		DBMS_OUTPUT.PUT_LINE(vResult.name); 
+	END LOOP; 
+END; 
+
+-- data type is equal to data type of table column: myname STUDENT.NAME%TYPE;
+-- data type is equal to exact the data type of all table columns: v_student STUDENT%ROWTYPE;
+-- pseudo-column: SELECT rank.rowid, name FROM rank;
+-- pseudo-column to show row number of record: SELECT rownum, name FROM rank;
+-- show first three names of reord: SELECT name FROM rank WHERE rownum <= 3 ORDER BY name;
+	
+============ PACKAGE ============================================================
+CREATE OR REPLACE package test AS 
+	-- externally accessible var 
+	globalvar NUMBER; 
+	procedure proc1(p1 int); 
+end test;
+
+CREATE OR REPLACE package body test AS
+	 -- package global var 
+	procglobal int;
+	
+	 -- define procedure implementation 
+	procedure proc1(p1 int) IS 
+	BEGIN
+		-- do something here; 
+	END;
+END;
+============ DICT ============================================================
+SELECT * FROM DICT
+SELECT * FROM DICT_COLUMNS
+	WHERE TABLE_NAME = 'USER_TABLES';	
+SELECT object_name FROM user_objects;
+SELECT table_name FROM dictionary;
+
+SELECT * FROM  ...
+USER_TAB_PRIVS (rights on tables)
+USER_COL_PRIVS (rights on columns)
+DBA_SYS_PRIVS (user-list with system privileges)
+USER_SYS_PRIVS (system privileges of current user)
+USER_ROLES_PRIVS (roles assigned to current user)
+DBA_ROLES (all roles)
+DBA_ROLES_PRIVS ( a list of roles assigned to current user)
+USER_TABLES
+USER_ALL_TABLES
+USER_COL_PRIVS (columns)
+USER_VIEWS
+USER_SOURCE (procedures)
+USER_TRIGGERS
+USER_CONSTRAINTS
+user_object_tables
+
+============ INDEX ============================================================
+CREATE [UNIQUE] INDEX CustomInd1
+ON Customer(CustomerID [ASC] [,...])
+
+CREATE INDEX Name ON person (nachname, vorname);
+DROP INDEX KundInd1
+
+============ PERMISSION ============================================================
+CREATE USER test IDENTIFIED BY mypassword
+GRANT connect to test
+
+ALTER USER xyz IDENTIFIED BY mypassword
+DROP USER jones CASCADE;
+
+GRANT all privileges TO jack;   --- alle Rechte einem User geben
+GRANT select ON x TO public  --- spezifische Rechte allen Usern zuweisen
+
+SELECT * FROM username.table   --- access to objects owned by other users
+REVOKE rights ON table FROM me
+CREATE ROLE myrole
+
+============ CREATE ============================================================
+CREATE TABLE logs 
+   (
+  vorname VARCHAR2 (255), 
+	nachname VARCHAR2 (255), 
+	flugID NUMBER, 
+	time_stamp TIMESTAMP (6)
+   ) ;
+
+CREATE SEQUENCE flugID_seq
+  START WITH 46
+  INCREMENT BY 1
+  CACHE 20;
+SELECT flugID_seq.NEXTVAL INTO v_flugID_neu FROM dual;
+
+--unter BEGINN einen savepoint setzen:  savepoint startDelFlug;
+-- EXCEPTION: WHEN OTHERS THEN rollback to savepoint startDelFlug;
+
+-- Basics: IN, NOT IN, ANY, SOME, ALL, BETWEEN ... AND, EXISTS, LIKE '_A%', IS NULL
+-- Basics: GROUP BY (achtung alle attribute vom group by müssen im select sein), ORDER BY; CONT, MAX, MIN, AVG, 
+-- Basics: to_char(d[,format]) converts dates to strings | to_date(s[,format]) converts strings to dates | months_between(d1, d2) number of months between d1 and d2
+
+============ IF, LOOP, WHILE, CASE ============================================================
+IF ... THEN
+ELSEIF
+ELSE 
+END IF;
+
+CASE
+	WHEN ... THEN
+	WHEN ... THEN
+	ELSE
+END CASE;
+
+OPEN data;
+	LOOP
+        FETCH data INTO vResult;
+        EXIT WHEN data%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('was auch immer');
+	END LOOP;
+CLOSE data;
+
+WHILE ...
+LOOP
+END LOOP;
+
+FOR i IN 1...10
+LOOP
+END LOOP;
+
+============ JOINS ============================================================
+(INNER) JOIN: Returns records that have matching values in both tables
+LEFT (OUTER) JOIN: Return all records from the left table, and the matched records from the right table
+RIGHT (OUTER) JOIN: Return all records from the right table, and the matched records from the left table
+FULL (OUTER) JOIN: Return all records when there is a match in either left or right table
+UNION combines two rowsets and removes any duplicates
+UNION ALL same as union but without removing duplicates
+INTERSECT finds rows in common between the result sets of two selects
+============ EXCEPTION ============================================================
+--declar an exception: speziellerFlug EXCEPTION;  
+--verwendung: RAISE speziellerFlug;
+
+WHEN OTHERS THEN RAISE;
+WHEN OTHERS THEN
+      DBMS_OUTPUT.PUT_LINE('Unbekannter Fehler. Alle Änderungen werden zurückgesetzt.'||  SQLCODE || ' Error-Meldung: ' || SQLERRM);
+WHEN NO_DATA_FOUND THEN NULL;
+WHEN meineexception THEN	
+	RAISE_APPLICATION_ERROR(-20001, 'unbekannter Fehler');
+WHEN TOO_MANY_ROWS THEN
+	DBMS_OUTPUT.PUT_LINE(nname || ' mehrfach vorhanden Error-Code: ' || SQLCODE || ' Error-Meldung: ' || SQLERRM);
+WHEN TIMEOUT_ON_RESOURCE THEN
+	DBMS_OUTPUT.PUT_LINE(nname || ' datensatz is gesperrt. Error-Code: ' || SQLCODE || ' Error-Meldung: ' || SQLERRM);
+WHEN ZERO_DIVIDE THEN
+
+
+
+
+
