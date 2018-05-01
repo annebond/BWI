@@ -103,9 +103,9 @@ class Mazda extends Auto {
     }
 }
 
-$myCar = new Auto();
+$myCar = new Auto;
 echo $myCar->farbe;
 
-$myCar2 = new Mazda();
+$myCar2 = new Mazda;
 $myCar2->fahren();
 ?>
