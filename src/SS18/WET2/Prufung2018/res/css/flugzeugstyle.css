@@ -1,0 +1,21 @@
+.flugzeug{
+	width: 120px;
+	height: 120px;
+	float: left;
+	font-weight: bold;
+	font-size: 11px;
+	border: 1px solid #888;
+	margin: 5px;
+	padding: 5px;
+	position: relative;
+	background-color: #fbfbfb;
+	background-image: url("../img/airplane.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+.flugzeug button{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
