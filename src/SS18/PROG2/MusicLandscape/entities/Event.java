@@ -89,6 +89,7 @@ public class Event {
 	}
 	
 	public String toString() {
+		//max = (a>b) ? a : b --> if condition true than a else b
 		String strArtist = this.artist != null ? this.artist.toString() : "unknown";
 		String strVenue = this.venue != null ? this.venue.getName() : "unknown";
 		String strDate = this.date != null ? this.date.toString() : "null";
