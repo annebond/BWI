@@ -1,6 +1,10 @@
 package SS18.PROG2.MusicLandscape.entities;
+import WS1718.PROG1.prog.utils.*;
+import SS18.PROG2.MusicLandscape.util.*;
+import java.util.Scanner;
 
-public class Track {
+
+public class Track implements ConsoleScanable {
 
 	private int duration;
 	private Artist performer;
@@ -121,4 +125,37 @@ public class Track {
 	public String toString () {	
 		return this.getString();		
 	}
+	
+	public boolean scan() {
+		boolean fieldChanged = false, objectChanged = false;
+		String input;
+		// scanning title
+		do {
+		TextIO.putf("current title: %s\n", this.title);
+		TextIO.putf("enter new title (leave empty to keep):");
+		input = TextIO.getlnString();
+		if (input.length() == 0) { // keep old value?
+		fieldChanged = false;
+		break;
+		}
+	/*
+	if (!validateTitle(title)) {
+	TextIO.putf("not a valid title (%s).\n", title);
+	continue;
+	}
+	*/
+		fieldChanged = true;	
+		break;
+	} while (true);
+		if (fieldChanged) {
+			setTitle(input);
+	}
+	
+	objectChanged = objectChanged || fieldChanged;
+	fieldChanged = false; // set up for next field
+	// scan next field(s)
+	return objectChanged;
+	}
+	
+	
 }

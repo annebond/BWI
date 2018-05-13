@@ -1,9 +1,7 @@
 package SS18.PROG2_CUE01.Workout.tests;
 
 
-//import bwi.prog.utils.TextIO;
 import WS1718.PROG1.prog.utils.TextIO;
-
 import java.util.Locale;
 
 import static SS18.PROG2_CUE01.Workout.Main.*;

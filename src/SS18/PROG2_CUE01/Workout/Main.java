@@ -1,7 +1,6 @@
 package SS18.PROG2_CUE01.Workout;
 
 
-//import SS18.PROGbwi.prog.utils.TextIO;
 import WS1718.PROG1.prog.utils.TextIO;
 
 public class Main {

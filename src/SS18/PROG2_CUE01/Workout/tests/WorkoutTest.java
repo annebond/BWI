@@ -11,10 +11,7 @@ import java.lang.reflect.Method;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import java.io.PrintWriter;
-
-//import bwi.prog.utils.TestNGSupport;
 import WS1718.PROG1.prog.utils.TestNGSupport;
-//import bwi.prog.utils.TextIO;
 import WS1718.PROG1.prog.utils.TextIO;
 
 

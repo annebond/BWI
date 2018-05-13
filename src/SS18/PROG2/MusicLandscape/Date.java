@@ -1,8 +1,8 @@
 // **************************************************
 //		
-//       git.rev = 222
-//  git.revision = 5606f8db8c00d9e1a60936282607a4f156a2c7c2
-//         stage = ES03
+//       git.rev = 232
+//  git.revision = 5758f042c648661b29a7471f428d9556f8ed5e72
+//         stage = ES04
 //
 // ***************************************************
 package SS18.PROG2.MusicLandscape;
@@ -13,9 +13,14 @@ import java.util.Scanner;
  * 
  * @author TeM
  * @author JS
+ * @version 232
+ * @Stage ES04
  *
  */
 public class Date implements  java.lang.Comparable<Date>
+
+
+, SS18.PROG2.MusicLandscape.util.ConsoleScanable
 
 
 {
@@ -368,6 +373,8 @@ public class Date implements  java.lang.Comparable<Date>
 	 * @return true if this date was modified during the operation, false otherwise
 	 */
 	
+	@Override
+	
 	public boolean scan() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -388,5 +395,4 @@ public class Date implements  java.lang.Comparable<Date>
 		return String.format("%02d.%02d.%04d", d, m, y);
 	}
 
-	//test
 }
