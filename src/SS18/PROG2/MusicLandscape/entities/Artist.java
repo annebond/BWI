@@ -1,6 +1,7 @@
 package SS18.PROG2.MusicLandscape.entities;
 
-public class Artist {
+public class Artist extends Object
+implements Comparable<Artist>{
 	
 	private String name;
 	
@@ -34,5 +35,11 @@ public class Artist {
 	public String toString() {
 		String strArtist = this.name != null ? this.name : "unknown";
 		return strArtist;
+	}
+
+	@Override
+	public int compareTo(Artist arg0) {
+		// TODO Auto-generated method stub
+		return name.compareTo(arg0.getName());
 	}
 }
