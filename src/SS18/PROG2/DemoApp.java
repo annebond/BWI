@@ -1,5 +1,11 @@
 package SS18.PROG2;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.Writer;
+
 import SS18.PROG2.MusicLandscape.container.MyTrackContainer;
 import SS18.PROG2.MusicLandscape.entities.*;
 import SS18.PROG2.MusicLandscape.util.MyFormatter;
@@ -7,7 +13,7 @@ import SS18.PROG2.MusicLandscape.util.formatters.*;
 
 public class DemoApp {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Concert testConcert = new Concert();
 		testConcert.addTrack(new Track("track1"));
 		testConcert.addTrack(new Track("track2"));
@@ -85,6 +91,22 @@ public class DemoApp {
 		obj.selection();
 		printSelect(obj, formatShort);
 		
+		try {
+			FileWriter fw = new FileWriter("testfiles.txt",true);
+			Writer out = new BufferedWriter(fw);
+			PrintWriter pw = new PrintWriter(out);
+			
+			String t = "Text which will be added to file. ";
+			out.write(t);
+			pw.println();
+			pw.println("First line");
+			pw.println("Second line");
+			out.close();
+			pw.close();
+			
+		} catch (IOException e) {
+			
+		}
 
 	}
 	
