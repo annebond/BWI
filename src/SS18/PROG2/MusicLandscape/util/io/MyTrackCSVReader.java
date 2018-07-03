@@ -36,13 +36,14 @@ public class MyTrackCSVReader extends MyReader<Track> {
 				
 			}
 			
-			out.setTitle(lineSplitArray[TITLE].trim());
+			
 			out.setWriter (new Artist(lineSplitArray[WRITER].trim()));
 			out.setPerformer(new Artist(lineSplitArray[PERFORMER].trim()));
 			out.setDuration(Integer.parseInt(lineSplitArray[DURATION].trim()));
 			out.setYear(Integer.parseInt(lineSplitArray[YEAR].trim()));
+			out.setTitle((lineSplitArray[TITLE].trim()));
 			System.out.println(out);
-			
+			return out;
 			
 			
 		}
