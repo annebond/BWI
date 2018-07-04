@@ -1,5 +1,10 @@
 package SS18.PROG2;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
+
 public class snippets {
 
 	String.format("%8.2f %02d %-8d", varA, varB, varC) // 8digits+2 after dec.point, with leading zeros, left aligned
@@ -93,7 +98,16 @@ public class snippets {
 
 	Scanner sc = new Scanner(System.in);
 	switch (sc.next()) { case "1": ...}	
-	
+//WRITER
+	FileWriter fw = new FileWriter("testfiles.txt",true); //true is optional - add instead of overwrite 
+	Writer out = new BufferedWriter(fw);
+	PrintWriter pw = new PrintWriter(out);
+	String t = "Text which will be added to file. ";
+	out.write(t);
+	pw.println();
+	pw.println("First line");
+	out.close();
+	pw.close();	
 
 //DEEPCOPY
 	this.artist = new Artist(e.artist); 
